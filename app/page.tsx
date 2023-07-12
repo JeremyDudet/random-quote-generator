@@ -45,9 +45,9 @@ export default function Home() {
       </div>
       <div
         id="quote-box"
-        className="max-w-xl flex flex-col border-red-50 border-2 w-full h-600px my-auto px-8 py-4"
+        className="overflow-hidden rounded-lg max-w-xl flex flex-col w-full h-600px my-auto px-8 py-4"
       >
-        <div className="flex w-full flex-wrap justify-center ">
+        <div className=" flex w-full flex-wrap justify-center ">
           <span
             id="text"
             className="text-2xl text-center h-auto align-baseline"
@@ -61,10 +61,18 @@ export default function Home() {
           <span id="author">{author}</span>
         </div>
         <div className="flex justify-between pt-4">
-          <a href={postOnTwitter()} id="tweet-quote">
+          <a
+            className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            href={postOnTwitter()}
+            id="tweet-quote"
+          >
             Twitter
           </a>
-          <button onClick={fetchQuote} id="new-quote">
+          <button
+            className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            onClick={fetchQuote}
+            id="new-quote"
+          >
             New Quote
           </button>
         </div>
